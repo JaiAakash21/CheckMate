@@ -1,16 +1,50 @@
-# React + Vite
+# CheckMate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time multiplayer chess web app. Move validation is handled by chess.js, and live play between players runs over Socket.IO.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend:** React 19, Vite, Tailwind CSS, Framer Motion, Lucide icons
+- **Backend:** Node.js, Express, Socket.IO
+- **Game logic:** chess.js
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Requires Node.js 20 or newer.
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/JaiAakash21/CheckMate.git
+cd CheckMate
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# terminal 1: start the realtime server
+npm run server
+
+# terminal 2: start the frontend
+npm run dev
+```
+
+The frontend runs on the Vite dev server (http://localhost:5173 by default).
+
+## Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the Vite development server |
+| `npm run server` | Start the Express + Socket.IO backend |
+| `npm run build` | Create a production build |
+| `npm run lint` | Run ESLint |
+
+## Project structure
+
+```text
+backend/      Express + Socket.IO server
+src/
+  components/ UI components
+  hooks/      Custom React hooks
+  utils/      Helpers
+```
+
+## Author
+
+Built by [Jai Aakash S](https://github.com/JaiAakash21).
