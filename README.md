@@ -48,3 +48,9 @@ src/
 ## Author
 
 Built by [Jai Aakash S](https://github.com/JaiAakash21).
+
+## Public local-play demo
+
+[Play the GitHub Pages demo](https://jaiaakash21.github.io/CheckMate/). This build uses the existing chess.js rules and board UI for two players sharing one device. Moves, check, checkmate, resignation, and reset run in the browser. Multiplayer rooms require the separate Socket.IO server.
+
+Rebuild the public demo with `VITE_LOCAL_DEMO=true npm run build -- --base=/CheckMate/` and publish `dist` from the `gh-pages` branch.
